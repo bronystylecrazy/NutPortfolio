@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #202133;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a.floating {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+li {
+  list-style: none;
+}
+
+/* Navbar */
+nav {
+  z-index: 5000;
+  background-color: #202133;
+  width: 100%;
+  height: 4.5rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+}
+nav .nav-container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+nav .nav-container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+nav .nav-container ul a {
+  font-weight: 500;
+}
+
+main {
+  padding-top: 4.5rem;
+  background-color: #242537;
+}
+main.fit {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.red {
+  color: #ee595d !important;
+}
+
+.prime {
+  color: #202133;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.font-large {
+  font-size: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.hero .description {
+  font-weight: 300;
+}
+.hero.primary {
+  background-color: #202133;
+}
+.hero.dark {
+  background-color: #1a1a27;
+}
+.hero section.intro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.hero section.intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0px;
+}
+.hero section.intro .description {
+  font-size: 1.5rem;
+  margin: 0px;
+}
+.hero section.pic {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .center {
+  display: flex;
+}
+.hero header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.primary-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #8d484a;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  background-color: #ee595d;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.skill {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  color: #202133;
+}
+.skills .skill-item {
+  background-color: white;
+  width: 100%;
+  color: #202133;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.skills .skill-item p {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+.skills .skill-icon {
+  width: 100px;
+}
+.skills .skill-icon img {
+  width: 100%;
+}
+.skills .skill-text {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.shadow {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+}
+
+hr {
+  width: 100%;
+  max-width: 300px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 100px;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 2rem;
+}
+.project-item .project-img {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0.5rem;
+}
+
+.image-wrapper {
+  padding: 0px;
+  margin: 0px;
+}
+.image-wrapper img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.title a {
+  background-color: #ee595d;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.subtitle {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+img.profile {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 0.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20vw);
+  transition: all 0.5s ease-in-out;
+  grid-gap: 1rem;
+}
+.gallery img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+.gallery img:hover img {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+}
+.gallery .gallery-item {
+  margin: 0px;
+  padding: 0px;
+}
+.gallery .gallery-item.grid-1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.gallery .gallery-item.coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+}
+
+footer {
+  background-color: #242537;
+  padding: 2rem 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+footer .social {
+  display: flex;
+  gap: 1rem;
+}
+footer .social a {
+  color: #202133;
+  font-size: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.soft-shadow {
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.nav-links li {
+  position: relative;
+  height: 100%;
+}
+
+.nav-links li:hover .decorator {
+  width: 80%;
+}
+
+.decorator {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  border-radius: 100px;
+  transition: all 0.25s ease-in-out;
+}
+
+/*# sourceMappingURL=style.css.map */

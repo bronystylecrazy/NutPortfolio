@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+$navbar-height: 4.5rem;
+$primary-color: #202133;
+$secondary-color: #242537;
+$button-color: #ee595d;
+$container: 1200px;
+$shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.6);
+$soft-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+$radius: 0.5rem;
+$soft-text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+// scrollbehaviour smooth
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: $primary-color;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &.floating {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+/* Navbar */
+nav {
+  z-index: 5000;
+  background-color: $primary-color;
+  width: 100%;
+  .nav-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      a {
+        font-weight: 500;
+      }
+    }
+  }
+  height: $navbar-height;
+  box-shadow: $soft-shadow;
+  position: fixed;
+}
+
+main {
+  &.fit {
+    min-height: calc(100vh);
+  }
+  padding-top: $navbar-height;
+  background-color: $secondary-color;
+}
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.red {
+  color: $button-color !important;
+}
+
+.prime {
+  color: $primary-color;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.font-large {
+  font-size: 1.5rem;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  .description {
+    font-weight: 300;
+  }
+  &.primary {
+    background-color: $primary-color;
+  }
+  &.dark {
+    background-color: #1a1a27;
+  }
+  section {
+    &.intro {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0px;
+      }
+      .description {
+        font-size: 1.5rem;
+        margin: 0px;
+      }
+    }
+
+    &.pic {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .center {
+    display: flex;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.primary-btn {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #8d484a;
+  transition: all 0.25s ease-in-out;
+  box-shadow: $soft-shadow;
+}
+
+.primary-btn:hover {
+  background-color: $button-color;
+  box-shadow: $shadow;
+}
+
+.skill {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  color: $primary-color;
+  .skill-item {
+    background-color: white;
+    width: 100%;
+    color: $primary-color;
+    border-radius: $radius;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    p {
+      font-weight: 500;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .skill-icon {
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+  .skill-text {
+    flex: 1;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  text-shadow: $soft-text-shadow;
+}
+
+.shadow {
+  box-shadow: $shadow;
+}
+
+hr {
+  width: 100%;
+  max-width: 300px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 100px;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 2rem;
+  .project-img {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    border-radius: $radius;
+  }
+}
+
+.image-wrapper {
+  // border-radius: $radius;
+  // overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  img {
+    width: 100%;
+    border-radius: $radius;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+
+  a {
+    background-color: $button-color;
+    border: none;
+    border-radius: $radius;
+    padding: 0.5rem 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 0.75rem;
+  }
+}
+.subtitle {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+img.profile {
+  width: 100%;
+  max-width: 400px;
+  border-radius: $radius;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20vw);
+  transition: all 0.5s ease-in-out;
+  grid-gap: 1rem;
+
+  img {
+    border-radius: $radius;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: $soft-shadow;
+    &:hover {
+      img {
+        box-shadow: $shadow;
+      }
+    }
+  }
+
+  .gallery-item {
+    margin: 0px;
+    padding: 0px;
+    &.grid-1 {
+      grid-column-start: 1;
+      grid-column-end: 1;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+    &.coming-soon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-weight: 500;
+      font-size: 2rem;
+      border-radius: $radius;
+    }
+  }
+}
+
+footer {
+  background-color: $secondary-color;
+  padding: 2rem 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  .social {
+    display: flex;
+    gap: 1rem;
+    a {
+      color: $primary-color;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.soft-shadow {
+  box-shadow: $soft-shadow;
+}
+
+.rounded {
+  border-radius: $radius;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+
+  gap: 1rem;
+}
+
+.nav-links {
+  li {
+    position: relative;
+    height: 100%;
+  }
+}
+
+.nav-links li:hover {
+  .decorator {
+    width: 80%;
+  }
+}
+
+.decorator {
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  border-radius: 100px;
+  transition: all 0.25s ease-in-out;
+}

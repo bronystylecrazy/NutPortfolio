@@ -1,4 +1,4 @@
 # NutPortfolio
- A portfolio by Nut Makhasit, using only HTML & CSS
+ A portfolio by Sirawit Pratoomsuwan a gift to my friend Nut Makhasit, using only HTML & CSS
 
-[Demo](https://nutmakhasit.netlify.com)
+[Demo portfolio](https://nutmakhasit.netlify.com)
